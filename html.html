@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <title>Cisco Meraki Scanning API</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=<Google API Key>"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+    <script>{{{payload.script}}}</script>
+    <style>{{{payload.style}}}</style>
+  </head>
+  <body>
+    <div id="masthead">
+      <div id="masthead-content">
+        <img src="https://meraki.cisco.com/img/cisco-meraki.png"/>
+      </div>
+    </div>
+    <div id="content">
+      <h1>Cisco Meraki Scanning API <small><i><h2>integrating Cisco Meraki MV, Cisco Spark, Google Maps & Node-RED</h2></i></small></h1>
+      <div id="mac-address">
+        <input id="mac-field" type="text" placeholder="Enter MAC address" />&nbsp;
+        <button id="track">Follow</button>&nbsp;
+        <button id="all">View All</button>
+        <button><a href=/clients target="_blank" style="text-decoration:none; color: inherit">View All - JSON</a></button>
+      </div>
+      <div id="last-mac"></div>
+      <div class="small"><span class="bold">Clients in the wrong place?</span> Make sure your APs are placed properly in Dashboard.</div>
+      <div id="map-wrapper">
+        <div id="map-canvas"></div>
+      </div>
+    </div>
+  </body>
+</html>
