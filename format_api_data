@@ -1,0 +1,93 @@
+// This Node-RED function extracts Meraki Scanning API data and prepares it for entry into Mongodb
+// If payload is empty return null
+if(msg.payload === null){
+    return null;
+}
+
+var map = msg.payload;
+client = {}; 
+
+// Localise Time to Local System Parameters and truncate
+function localiseTime(time) {
+    time = new Date(time);
+    time = time.toString();
+    time = time.split(' ').slice(0, 5).join(' ');
+    return time;
+}
+
+// Truncate IP field
+function ipClean(ip) {
+    if (ip !== null) {
+    ip = ip.substring(1);}
+    return ip;
+}
+
+// Format Epoch Time to meet MV location request requirements
+function localiseEpoch(time) {
+    //convert Scanning API epoch time to millisecond variant
+    time = time * 1000;
+    return time;
+}
+
+// Log/validate Meraki Scanning API version for debugging purposes
+if (map.version != '2.0'){
+    msg.log = "Received Scanning API post with unexpected version. Please ensure Version 2 is configured in Dashboard. Received Version: "+map.version;
+    } else {
+    msg.log = "Received Scanning API Version 2 Post.";
+}
+
+// Normalise Wireless Client observations
+if (map.type == "DevicesSeen"){
+        var obj = map.data.observations;
+        for (var prop in obj){
+            if (obj.hasOwnProperty(prop)) {
+                if (!obj[prop].location){continue;}
+                    client.type = "wireless";
+                    client.name = obj[prop].clientMac;
+                    client.mac = obj[prop].clientMac;
+                    client.lat = obj[prop].location.lat;
+                    client.lng = obj[prop].location.lng;
+                    client.unc = obj[prop].location.unc;
+                    client.rssi = obj[prop].rssi;
+                    client.clastseen = localiseTime(obj[prop].seenTime);
+                    client.floors = map.data.apFloors === null ? "" : map.data.apFloors.join;
+                    client.manufacturer = obj[prop].manufacturer;
+                    client.os = obj[prop].os;
+                    client.ipv4 = ipClean(obj[prop].ipv4);
+                    client.ssid = obj[prop].ssid;
+                    client.ap = map.data.apMac;
+                    client.epoch = localiseEpoch(obj[prop].seenEpoch);
+                    client.tag = map.data.apTags;
+            }
+            // Return object array properties
+            msg.payload = client;
+            node.send(msg);
+        }
+    }
+
+// Normalise Bluetooth Client observations
+    if (map.type == "BluetoothDevicesSeen"){
+        var obj = map.data.observations;
+        for (var prop in obj){
+            if (obj.hasOwnProperty(prop)) {
+                if (!obj[prop].location){continue;}
+                    client.type = "bluetooth";
+                    client.name = obj[prop].clientMac;
+                    client.mac = obj[prop].clientMac;
+                    client.lat = obj[prop].location.lat;
+                    client.lng = obj[prop].location.lng;
+                    client.unc = obj[prop].location.unc;
+                    client.rssi = obj[prop].rssi;
+                    client.clastseen = localiseTime(obj[prop].seenTime);
+                    client.floors = map.data.apFloors === null ? "" : map.data.apFloors.join;
+                    client.ap = map.data.apMac;
+                    client.epoch = localiseEpoch(obj[prop].seenEpoch);
+                    client.tag = map.data.apTags;
+            }
+            // Return object array properties
+            msg.payload = client;
+            node.send(msg);
+        }
+    }
+ 
+return null;
