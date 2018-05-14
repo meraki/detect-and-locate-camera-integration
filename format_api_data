@@ -1,4 +1,5 @@
 // This Node-RED function extracts Meraki Scanning API data and prepares it for entry into Mongodb
+
 // If payload is empty return null
 if(msg.payload === null){
     return null;

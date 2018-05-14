@@ -1,4 +1,4 @@
-// This function updates/creates the client in the database
+// This function updates/creates the client record in the database
 var filter = msg.payload;
 if ("string" == typeof filter) {
   filter = JSON.parse(filter);

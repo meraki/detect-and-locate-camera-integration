@@ -1,3 +1,3 @@
-// Prepend key 'name' to MAC object payload
+// Prepend key 'name' to mac object payload
 msg.payload = {'name':msg.payload};
 return msg;

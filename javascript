@@ -1,5 +1,6 @@
 // This Node-RED template renders a client object/s and associated parameters on a Google Map
 (function ($) {
+  
   var map,                                      // Google map
     clientMarker,                               // Client marker when following a single client
     clientUncertaintyCircle,                    // Client circle representing client location uncertainty

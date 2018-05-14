@@ -2,9 +2,9 @@
 // HTTP POST parameters for sending a Cisco Spark message to a Spark room.
 
 // Personal Access Token
-var accessToken = "<Cisco Spark API Key>"; 
+var accessToken = "< Cisco Spark API Key >"; 
 // Spark roomId
-var roomId = "<Cisco Spark Room ID>"; 
+var roomId = "< Cisco Spark Room ID >"; 
 
 // Build Cisco Spark API Call
 msg.url = "https://api.ciscospark.com/v1/messages";

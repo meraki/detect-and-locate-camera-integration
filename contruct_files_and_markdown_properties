@@ -1,8 +1,8 @@
 // Construct custom Spark Message for Follow Client Tracking
 // Build custom Google PATH to create uncerntainty circle
 
-// Your Google Static Map API Key
-var googleApi = '<Google API Key>';
+// Your Google Static Map API Key 
+var googleApi = '< Google API Key >';
 
 // Google Static Maps Path Circle Function
 // Ref: borland592:https://stackoverflow.com/questions/7316963/drawing-a-circle-google-static-maps/35660617#35660617
