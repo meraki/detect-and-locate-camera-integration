@@ -1,3 +1,0 @@
-//Extract MAC Address
-msg.payload = msg.req.params.mac;
-return msg;

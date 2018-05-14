@@ -1,4 +1,0 @@
-// Optional function to query /clients and write to payload to query mongodb present via HTML
-// default payload is null
-msg.payload = {};
-return msg;

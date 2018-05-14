@@ -1,3 +1,0 @@
-// Prepend key 'name' to MAC object payload
-msg.payload = {'name':msg.payload};
-return msg;
