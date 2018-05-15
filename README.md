@@ -1,6 +1,4 @@
-# Project Title
-
-Integrating the Cisco Meraki Scanning API, with Meraki MV, Cisco Spark, Google Maps and Node-RED
+# Integrating the Cisco Meraki Scanning API, with Meraki MV, Cisco Spark, Google Maps and Node-RED
 
 Document URL: Coming Soon
 
