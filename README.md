@@ -1,6 +1,7 @@
-# Title
+# Project Title
 
 Integrating the Cisco Meraki Scanning API, with Meraki MV, Cisco Spark, Google Maps and Node-RED
+
 Document URL: Coming Soon
 
 ## Summary
@@ -15,7 +16,7 @@ The purpose of this document/project is to assist users in building a working mi
 
 ### Installing
 
-The source code included in this repository is designed to be paired with the "Integrating the Cisco Meraki Scanning API, with Meraki MV, Cisco Spark, Google Maps and Node-RED" whitepaper hosted on the [Cisco Meraki Create Space] (https://create.meraki.io/)
+The source code included in this repository is designed to be paired with the "Integrating the Cisco Meraki Scanning API, with Meraki MV, Cisco Spark, Google Maps and Node-RED" whitepaper hosted on the [Cisco Meraki Create Space](https://create.meraki.io/)
 
 It aims to deliver step-by-step instructions to educate and guide the reader from start to finish. It is hoped and encouraged that you can use this document as a guide to start your own API learning journey.
 
@@ -24,9 +25,9 @@ Document URL: Coming Soon
 
 ## Built With
 
-* [Cisco Meraki MV] (https://meraki.cisco.com/products/security-cameras) - Cisco Meraki Cloud Managed Security Cameras
-* [Cisco Meraki MR] (https://meraki.cisco.com/products/wireless) - Cisco Meraki Cloud Managed Wireless
-* [Cisco Meraki MX] (https://meraki.cisco.com/products/wireless) - Cisco Meraki Cloud Managed Security & SD-WAN
+* [Cisco Meraki MV](https://meraki.cisco.com/products/security-cameras) - Cisco Meraki Cloud Managed Security Cameras
+* [Cisco Meraki MR](https://meraki.cisco.com/products/wireless) - Cisco Meraki Cloud Managed Wireless
+* [Cisco Meraki MX](https://meraki.cisco.com/products/wireless) - Cisco Meraki Cloud Managed Security & SD-WAN
 * [Cisco Webex Teams (was Cisco Spark)](https://www.webex.com/products/teams/index.html) - Cisco Collaboration Portfolio
 * [Google Maps Platform](https://cloud.google.com/maps-platform/) - Google Maps Toolkit incl. Static Map and Javascript APIs
 * [Node-RED](https://nodered.org/) - IoT programming framework 
@@ -36,9 +37,10 @@ Document URL: Coming Soon
 ## Contributing
 
 Special thanks to the following parties whose code/work assisted with the baseline solution:
-**Cory Guynn** - A seasoned Cisco Meraki systems engineer, who has spent years architecting and supporting global computer networks across all industries. You can learn more about Cory and his great work @ [The Internet of Lego] (http://www.internetoflego.com/)
 
-**borland502** - A stackoverflow community contributor who shared their great JavaScript function to dynamically build a path derived circle on top of a Google Static Map. [Stackoverflow Function Post] (https://stackoverflow.com/questions/7316963/drawing-a-circle-google-static-maps/35660617#35660617)
+**Cory Guynn** - A seasoned Cisco Meraki systems engineer, who has spent years architecting and supporting global computer networks across all industries. You can learn more about Cory and his great work @ [The Internet of Lego](http://www.internetoflego.com/)
+
+**borland502** - A stackoverflow community contributor who shared their great JavaScript function to dynamically build a path derived circle on top of a Google Static Map. [Stackoverflow Function Post](https://stackoverflow.com/questions/7316963/drawing-a-circle-google-static-maps/35660617#35660617)
 
 
 ## Versioning
